@@ -1,0 +1,48 @@
+*:focus,
+*:active {
+  outline: none;
+}
+
+.form {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3a46b1;
+  border-left: none;
+  border-right: none;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.input {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #3a46b1;
+}
+.btn {
+  width: fit-content;
+  height: 30px;
+  border-radius: 4px;
+  margin: 0 auto 15px 10px;
+  color: #fff;
+  background-color: #3e77f3;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #3158ad;
+}
