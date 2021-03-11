@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useSelector, useDispatch } from 'react-redux';
-import contactsOperations from '../../redux/operations';
-import { getContacts } from '../../redux/selectors';
+import contactsOperations from '../../redux/contacts/contacts-operations';
+import { getContacts } from '../../redux/contacts/contacts-selectors';
 import { useForm } from 'react-hook-form';
 
 import css from './ContactForm.module.css';

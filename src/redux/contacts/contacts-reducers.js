@@ -4,7 +4,7 @@ import {
   addContactSuccess,
   deleteContactSuccess,
   fetchContactsSuccess,
-} from './actions';
+} from './contacts-actions';
 
 const items = createReducer([], {
   [fetchContactsSuccess]: (_, { payload }) => payload,

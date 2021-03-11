@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { addContactSuccess } from '../../redux/actions';
+import { addContactSuccess } from '../../redux/contacts/contacts-actions';
 import ContactForm from '../contactForm/ContactForm';
 import Filter from '../filter/Filter';
 import ContactList from '../contactList/ContactList';

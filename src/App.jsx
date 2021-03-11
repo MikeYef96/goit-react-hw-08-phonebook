@@ -1,6 +1,15 @@
 import React from 'react';
-import Phonebook from './components/phonebook/Phonebook';
+import { Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { RegistrationPage } from './pages/RegistrationPage';
+import { LoginPage } from './pages/LoginPage';
+import { ContactsPage } from './pages/ContactsPage';
 
-export function App() {
-  return <Phonebook />;
-}
+export const App = () => (
+  <>
+    <Route exact path="/" component={HomePage} />
+    <Route path="/register" component={RegistrationPage} />
+    <Route path="/login" component={LoginPage} />
+    <Route path="/contacts" component={ContactsPage} />
+  </>
+);

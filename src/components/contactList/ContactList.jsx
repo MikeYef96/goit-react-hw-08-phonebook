@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import contactsOperations from '../../redux/operations';
-import { getVisibleContacts } from '../../redux/selectors';
+import contactsOperations from '../../redux/contacts/contacts-operations';
+import { getVisibleContacts } from '../../redux/contacts/contacts-selectors';
 
 import css from './ContactList.module.css';
 
