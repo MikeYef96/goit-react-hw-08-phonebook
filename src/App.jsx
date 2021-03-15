@@ -1,15 +1,83 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import { HomePage } from './pages/HomePage';
-import { RegistrationPage } from './pages/RegistrationPage';
-import { LoginPage } from './pages/LoginPage';
-import { ContactsPage } from './pages/ContactsPage';
+import React, { useEffect, Switch, Suspense, lazy } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Container from './components/Container';
+import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
+import authSelectors from './redux/auth/auth-selectors';
+import authOperations from './redux/auth/auth-operations';
+import HeaderMUI from './components/HeaderMUI/HeaderMUI';
+import BottomAppBar from './components/Footer/BottomAppBar';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { css } from '@emotion/react';
+import ClockLoader from 'react-spinners/ClockLoader';
 
-export const App = () => (
-  <>
-    <Route exact path="/" component={HomePage} />
-    <Route path="/register" component={RegistrationPage} />
-    <Route path="/login" component={LoginPage} />
-    <Route path="/contacts" component={ContactsPage} />
-  </>
-);
+const HomePage = lazy(() => import('./pages/HomePage'));
+const RegistrationPage = lazy(() => import('./pages/RegistrationPage'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const ContactsPage = lazy(() => import('./pages/ContactsPage'));
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#011211',
+    },
+    secondary: {
+      main: '#faa346',
+    },
+  },
+});
+
+const override = css`
+  display: block;
+  margin: 50px auto;
+  border-color: red;
+`;
+
+export default function App() {
+  const dispatch = useDispatch();
+  const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
+  console.log(isFetchingCurrentUser);
+
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
+
+  return (
+    <Container>
+      {isFetchingCurrentUser ? (
+        <ClockLoader css={override} color={'#e8834d'} size={150} />
+      ) : (
+        <ThemeProvider theme={theme}>
+          <HeaderMUI />
+          <Switch>
+            <Suspense
+              fallback={
+                <ClockLoader css={override} color={'#e8834d'} size={150} />
+              }
+            >
+              <PublicRoute exact path="/" component={HomePage} />
+              <PublicRoute
+                path="/register"
+                component={RegistrationPage}
+                redirectTo="/"
+                restricted
+              />
+              <PublicRoute
+                path="/login"
+                component={LoginPage}
+                redirectTo="/"
+                restricted
+              />
+              <PrivateRoute
+                path="/contacts"
+                component={ContactsPage}
+                redirectTo="/login"
+              />
+            </Suspense>
+          </Switch>
+          <BottomAppBar />
+        </ThemeProvider>
+      )}
+    </Container>
+  );
+}
