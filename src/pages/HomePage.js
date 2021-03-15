@@ -9,6 +9,7 @@ import phone2 from './images/phone2.jpg';
 import phone3 from './images/phone3.jpg';
 import Confetti from 'react-confetti';
 
+// eslint-disable-next-line
 const styles = {
   container: {
     minHeight: 'calc(100vh - 200px)',

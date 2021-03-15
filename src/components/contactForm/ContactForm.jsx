@@ -23,6 +23,7 @@ const schema = yup.object().shape({
 });
 
 export default function ContactForm() {
+  // eslint-disable-next-line
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
