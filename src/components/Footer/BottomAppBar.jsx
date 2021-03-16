@@ -17,6 +17,7 @@ export default function BottomAppBar() {
   return (
     <React.Fragment>
       <CssBaseline />
+
       <AppBar color="primary" className={classes.appBar}>
         <Toolbar></Toolbar>
       </AppBar>

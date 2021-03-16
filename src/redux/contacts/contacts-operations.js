@@ -39,7 +39,6 @@ const addContact = (name, number) => async dispatch => {
 
 const deleteContact = id => async dispatch => {
   dispatch(deleteContactRequest());
-
   try {
     await axios.delete(`/contacts/${id}`);
     dispatch(deleteContactSuccess(id));
@@ -53,4 +52,5 @@ const contactsOperations = {
   addContact,
   deleteContact,
 };
+
 export default contactsOperations;

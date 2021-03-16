@@ -8,7 +8,7 @@ const styles = {
     padding: 12,
     fontWeight: 900,
     fontSize: 18,
-    color: '#faa346',
+    color: '#6f7ff7',
   },
   activeLink: {
     color: '#ffffff',
@@ -20,7 +20,7 @@ export default function NavigationMUI() {
   return (
     <nav>
       <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-        Homepage
+        Home
       </NavLink>
 
       <NavLink

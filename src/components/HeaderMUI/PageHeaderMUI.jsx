@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 0, 2),
     textAlign: 'center',
     fontSize: '38px',
-    color: '#faa346',
+    color: '#6f7ff7',
     textShadow: '1px 1px #9c5203',
   },
 }));

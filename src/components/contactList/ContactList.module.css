@@ -1,39 +1,22 @@
-ul {
-  max-width: 630px;
-}
-
-.contactListItem {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 200px;
-  font-weight: 700;
+.list {
+  max-width: 500px;
+  text-align: center;
   list-style: none;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  background-color: #9cc7f1;
-  border-radius: 4px;
 }
 
-.listItemContainer {
-  width: 90%;
-  margin-left: 10px;
+.listItemText {
   margin-right: 10px;
 }
 
-.btn {
-  width: fit-content;
-  height: 30px;
-  border-radius: 4px;
-  margin: 0 auto 15px 10px;
-  color: #fff;
-  background-color: #3e77f3;
+.button {
+  max-width: 100px;
+  height: 20px;
   border: none;
-  outline: none;
+  border-radius: 10px;
+  background-color: rgb(223, 178, 119);
 }
 
-.btn:hover {
-  cursor: pointer;
-  background-color: #3158ad;
+.button:hover,
+.button:focus {
+  background-color: red;
 }

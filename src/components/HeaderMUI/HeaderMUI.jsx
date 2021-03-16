@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Grid } from '@material-ui/core';
 import Navigation from './NavigationMUI';
 import AuthNav from './AuthNavMUI';
 import UserMenu from './UserMenuMUI';
-import authSelectors from '../../redux/auth/auth-selectors';
+import { authSelectors } from 'redux/auth';
 
 export default function HeaderMUI() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);

@@ -1,8 +1,3 @@
-*:focus,
-*:active {
-  outline: none;
-}
-
 .form {
   margin-right: auto;
   margin-left: auto;
@@ -12,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #3a46b1;
+  border: 1px solid rgb(192, 128, 55);
   border-left: none;
   border-right: none;
 }
@@ -28,21 +23,19 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px;
-  border-radius: 10px;
-  border-color: #3a46b1;
-}
-.btn {
-  width: fit-content;
-  height: 30px;
-  border-radius: 4px;
-  margin: 0 auto 15px 10px;
-  color: #fff;
-  background-color: #3e77f3;
-  border: none;
-  outline: none;
+  border-radius: 10%;
+  border-color: rgb(192, 128, 55);
 }
 
-.btn:hover {
-  cursor: pointer;
-  background-color: #3158ad;
+.button {
+  max-width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(223, 178, 119);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #27812a;
 }

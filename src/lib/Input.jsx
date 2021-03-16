@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
 import { TextField } from '@material-ui/core';
+import React, { forwardRef } from 'react';
 
 const Input = forwardRef((props, ref) => {
   return (
@@ -13,5 +13,4 @@ const Input = forwardRef((props, ref) => {
     />
   );
 });
-
 export default Input;

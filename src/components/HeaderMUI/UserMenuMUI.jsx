@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import authSelectors from '../../redux/auth/auth-selectors';
-import authOperations from '../../redux/auth/auth-operations';
+import { authSelectors, authOperations } from 'redux/auth';
 import Button from '@material-ui/core/Button';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
@@ -9,7 +8,7 @@ const styles = {
   container: {
     display: 'flex',
     alignItems: 'baseline',
-    color: '#faa346',
+    color: '#6f7ff7',
   },
   name: {
     fontWeight: 700,
@@ -17,7 +16,7 @@ const styles = {
     marginRight: 12,
   },
   button: {
-    color: '#faa346',
+    color: '#6f7ff7',
     fontWeight: 700,
     fontSize: 18,
     textTransform: 'capitalize',
@@ -27,7 +26,7 @@ const styles = {
 export default function UserMenuMUI() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
-  const handleLogOut = () => dispatch(authOperations.logOut());
+  const logOutHandler = () => dispatch(authOperations.logOut());
 
   return (
     <div style={styles.container}>
@@ -37,9 +36,9 @@ export default function UserMenuMUI() {
         type="button"
         style={styles.button}
         endIcon={<PowerSettingsNewIcon fontSize="small" />}
-        onClick={handleLogOut}
+        onClick={logOutHandler}
       >
-        <span>Logout</span>
+        <span>Sign out</span>
       </Button>
     </div>
   );

@@ -17,7 +17,7 @@ const styles = {
 const Navigation = () => (
   <nav>
     <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-      Homepage
+      Home
     </NavLink>
 
     <NavLink
