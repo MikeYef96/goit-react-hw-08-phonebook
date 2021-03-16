@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './ContactList.module.css';
+import css from './ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsOperations } from 'redux/contacts';
 import { contactsSelectors } from 'redux/contacts';
@@ -37,11 +37,11 @@ export default function ContactList() {
     );
 
   return (
-    <ul className={s.list}>
+    <ul className={css.list}>
       {contacts.map(({ id, name, number }) => (
         <li key={id} data-id={id}>
-          <span className={s.listItemText}>{name}:</span>
-          <span className={s.listItemText}>{number}</span>
+          <span className={css.listItemText}>{name}:</span>
+          <span className={css.listItemText}>{number}</span>
           <Button
             startIcon={<DeleteIcon fontSize="small" color="white" />}
             className={styles.root}

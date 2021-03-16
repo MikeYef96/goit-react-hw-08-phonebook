@@ -25,8 +25,8 @@ export default function ContactForm() {
   const contacts = useSelector(contactsSelectors.getContacts);
   const [number, setNumber] = useState('');
 
-  const handleChange = e => {
-    const { value } = e.currentTarget;
+  const handleChange = evt => {
+    const { value } = evt.currentTarget;
     setNumber(value);
   };
 
