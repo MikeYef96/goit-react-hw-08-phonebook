@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "phonebook-react-redux",
   "version": "0.1.0",
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -39,14 +39,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikeYef96/goit-react-hw-08-phonebook.git"
+    "url": "git+https://github.com/MikeYef96/phonebook-react-redux.git"
   },
   "author": "Mike Yef <mike.yef@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MikeYef96/goit-react-hw-08-phonebook"
+    "url": "https://github.com/MikeYef96/phonebook-react-redux"
   },
-  "homepage": "https://mikeyef96.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://mikeyef96.github.io/phonebook-react-redux/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

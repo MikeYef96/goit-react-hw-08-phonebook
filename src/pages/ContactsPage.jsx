@@ -1,6 +1,6 @@
-import ContactForm from 'components/ContactForm';
-import ContactList from 'components/ContactList';
-import Filter from 'components/Filter';
+import ContactForm from '../components/СontactForm/index';
+import ContactList from '../components/СontactList/index';
+import Filter from '../components/Filter/index';
 import css from 'App.module.css';
 
 export default function ContactsPage() {
