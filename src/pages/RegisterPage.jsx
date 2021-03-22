@@ -59,7 +59,7 @@ export default function RegisterPage() {
         />
 
         <PrimaryButton type="submit" color="primary">
-          Registration
+          Sign up
         </PrimaryButton>
       </Form>
     </FormContainer>

@@ -25,7 +25,7 @@ export default function AuthNavMUI() {
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        Registration
+        Sign up
       </NavLink>
 
       <NavLink
